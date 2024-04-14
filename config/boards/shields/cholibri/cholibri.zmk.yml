@@ -7,12 +7,8 @@ requires: [pro_micro]
 features:
   - keys
   - pointer
-
-
 exposes:
   - i2c_glidepoint
-
-  
 siblings:
   - cholibri_left
   - cholibri_right
