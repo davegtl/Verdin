@@ -67,6 +67,19 @@
             label = "LASSO";
         };
 
+        pas1: pas1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp I &kp K &kp A &kp LS(T) &kp LS(I) &kp LS(L) &kp LS(L) &kp L &kp U &kp N &kp C &kp H &kp N3 &kp N2 &kp N1 &kp N9 &kp EXCL &kp QUESTION>;
+            label = "PAS1";
+        };
+
+        pas2: pas2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp I &kp K &kp A &kp LS(T) &kp LS(I) &kp LS(L) &kp LS(L) &kp M &kp I &kp D &kp D &kp A &kp G &kp N3 &kp N2 &kp N1 &kp N9 &kp EXCL>;
+            label = "PAS2";
+        };
         lock: lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
