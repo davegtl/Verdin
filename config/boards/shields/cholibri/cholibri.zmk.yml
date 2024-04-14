@@ -7,8 +7,14 @@ requires: [pro_micro]
 features:
   - keys
   - pointer
+  - display
+
 exposes:
   - i2c_glidepoint
+  - i2c_oled
+  
 siblings:
   - cholibri_left
   - cholibri_right
+
+
