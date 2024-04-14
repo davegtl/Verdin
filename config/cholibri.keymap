@@ -9,9 +9,7 @@
 
 &pinctrl {
     spi3_default: spi3_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 8)>;
-        };
+        group1 { psels = <NRF_PSEL(SPIM_MOSI, 0, 8)>; };
     };
 
     spi3_sleep: spi3_sleep {
@@ -48,15 +46,10 @@
 };
 
 / {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
+    chosen { zmk,underglow = &led_strip; };
 };
 
 /* END temporary RGB support section */
-
-
-
 
 / {
     combos {
@@ -215,10 +208,10 @@
 
         CONF {
             bindings = <
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &trans  &trans  &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans         &trans         &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &trans  &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans         &trans  &trans  &trans           &trans  &trans  &trans  &trans
             >;
 
             label = "CONF";
