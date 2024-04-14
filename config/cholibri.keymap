@@ -59,7 +59,7 @@
         };
 
         Win {
-            bindings = <&kp LEFT_WIN>;
+            bindings = <&kp LS(LG(SE_S))>;
             key-positions = <36 37>;
         };
 
