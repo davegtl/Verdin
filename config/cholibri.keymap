@@ -49,13 +49,13 @@
 
         pw1 {
             bindings = <&pas1>;
-            key-positions = <5 4>;
+            key-positions = <5 4 38>;
             layers = <1>;
         };
 
         pw2 {
             bindings = <&pas2>;
-            key-positions = <29 28>;
+            key-positions = <29 28 38>;
         };
 
         Win {
