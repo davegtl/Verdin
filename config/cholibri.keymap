@@ -87,7 +87,7 @@
         pas2: pas2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F &kp I &kp K &kp A &kp LS(T) &kp LS(I) &kp LS(L) &kp LS(L) &kp M &kp I &kp D &kp D &kp A &kp G &kp N3 &kp N2 &kp N1 &kp N9 &kp EXCL>;
+            bindings = <&kp LS(A) &kp LS(S) &kp LS(D) &kp LS(P) &kp O &kp M &kp LS(A) &kp LS(W) &kp LS(D) &kp P &kp O &kp LS(M) &kp LS(A) &kp LS(W) &kp LS(D) &kp PRCNT &kp EXCL>;
             label = "PAS2";
         };
 
