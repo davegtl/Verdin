@@ -13,8 +13,14 @@ if SHIELD_VERDIN_LEFT || SHIELD_VERDIN_RIGHT
 config ZMK_SPLIT
     default y
 
-endif
+config ZMK_RGB_UNDERGLOW
+    select WS2812_STRIP
+    select SPI
 
 config I2C
     default y
+
+endif
+
+
 
