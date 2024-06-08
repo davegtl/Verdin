@@ -6,10 +6,10 @@ url: https://github.com/
 requires: [pro_micro]
 features:
   - keys
-  - pointer
+
   - display
 exposes:
-  - i2c_glidepoint
+
 siblings:
   - verdin_left
   - verdin_right
