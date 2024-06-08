@@ -7,7 +7,9 @@
 #include <dt-bindings/zmk/mouse.h>
 
 
-
+&led_strip {
+    chain-length = <21>;
+};
 
 / {
     combos {
