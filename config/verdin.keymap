@@ -12,105 +12,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        conf {
-            bindings = <&mo 4>;
-            key-positions = <38 41>;
-        };
-
-        mkp_right {
-            bindings = <&mkp RCLK>;
-            key-positions = <6 7>;
-        };
-
-        mkp_mdl {
-            bindings = <&mkp MCLK>;
-            key-positions = <18 19>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
-        };
-
-        lasso {
-            bindings = <&lasso>;
-            key-positions = <11 10>;
-            layers = <1>;
-        };
-
-        lock {
-            bindings = <&lock>;
-            key-positions = <5 6>;
-            layers = <1>;
-        };
-
-        bootloader {
-            bindings = <&bootloader>;
-            key-positions = <6 11>;
-        };
-
-        pw1 {
-            bindings = <&pas1>;
-            key-positions = <5 4 38>;
-            layers = <1>;
-        };
-
-        pw2 {
-            bindings = <&pas2>;
-            key-positions = <29 28 38>;
-        };
-
-        Win {
-            bindings = <&kp LEFT_WIN>;
-            key-positions = <36 37>;
-        };
-
-        snip_tool {
-            bindings = <&snip>;
-            key-positions = <17 16>;
-        };
-    };
-
-    macros {
-        lasso: lasso {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(L) &kp A &kp S &kp S &kp O &kp PRCNT>;
-            label = "LASSO";
-        };
-
-        pas1: pas1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F &kp I &kp K &kp A &kp LS(T) &kp LS(I) &kp LS(L) &kp LS(L) &kp L &kp U &kp N &kp C &kp H &kp N3 &kp N2 &kp N1 &kp N9 &kp EXCL &kp SE_QUESTION>;
-            label = "PAS1";
-        };
-
-        pas2: pas2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(A) &kp LS(S) &kp LS(D) &kp LS(P) &kp O &kp M &kp LS(A) &kp LS(W) &kp LS(D) &kp P &kp O &kp LS(M) &kp LS(A) &kp LS(W) &kp LS(D) &kp PRCNT &kp EXCL>;
-            label = "PAS2";
-        };
-
-        lock: lock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt LEFT_WIN &kp SE_L>;
-            label = "LOCK";
-        };
-
-        snip: snip {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LG(SE_S))>;
-            label = "SNIP";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -119,60 +20,16 @@
             // |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
             // |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
             // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
-            //                               |   GUI   |   DEL   | RETURN  |  SPACE  |                      |  SPACE  |   TAB   |   BSPC  |  R ALT  |
+            //                               |   DEL   | RETURN  |  SPACE  |                                          |  SPACE  |   TAB   |   BSPC  |
 
             bindings = <
 &kp TAB         &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y      &kp U  &kp I         &kp O       &kp P         &kp SE_A_RING
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F  &kp G      &kp H      &kp J  &kp K         &kp L       &kp SEMI      &kp SQT
 &kp LCTRL       &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N      &kp M  &kp SE_COMMA  &kp SE_DOT  &kp SE_MINUS  &kp BACKSPACE
-                       &mo 3  &mo 2  &mo 1  &kp SPACE  &rgb_ug  &mo 1  &mo 5         &mo 6
+                        &mo 2  &mo 1  &kp SPACE  &rgb_ug  &mo 1  &mo 5         
             >;
 
             label = "QWERTY";
-        };
-
-        NUM {
-            bindings = <
-&kp LA(TAB)      &kp LS(SE_N1)             &kp LS(SE_N2)  &kp LS(SE_N3)  &kp LS(SE_N4)  &kp LS(SE_N5)  &kp LS(SE_N6)        &kp LS(SE_N7)  &kp LS(SE_N8)  &kp LS(SE_N9)  &kp LS(SE_N0)  &kp SE_QMARK
-&kp PIPE         &kp SE_N1                 &kp SE_N2      &kp SE_N3      &kp SE_N4      &kp SE_N5      &kp SE_N6            &kp SE_N7      &kp SE_N8      &kp SE_N9      &kp SE_N0      &kp SE_PLUS
-&kp NON_US_BSLH  &kp LS(NON_US_BACKSLASH)  &kp RA(SE_N2)  &kp RA(SE_N3)  &kp RA(SE_N4)  &kp DELETE     &kp RC(RA(SE_PLUS))  &kp RA(SE_N7)  &kp RA(SE_N8)  &kp RA(SE_N9)  &kp RA(SE_N0)  &kp NON_US_HASH
-                                           &trans         &trans         &trans         &kp ENTER      &trans               &trans         &trans         &trans
-            >;
-
-            label = "NUMB";
-        };
-
-        NAV {
-            bindings = <
-&kp LG(LA(SE_K))  &kp HOME  &kp UP    &kp END    &trans  &kp C_MUTE    &kp N7  &kp N8  &kp N9   &kp SE_SLASH  &trans  &trans
-&trans            &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp C_VOL_UP  &kp N4  &kp N5  &kp N6   &kp SE_STAR   &trans  &trans
-&trans            &trans    &trans    &trans     &trans  &kp C_VOL_DN  &kp N1  &kp N2  &kp N3   &kp SE_PLUS   &trans  &trans
-                            &trans    &trans     &trans  &trans        &trans  &kp N0  &kp DOT  &kp SE_MINUS
-            >;
-
-            label = "NAV";
-        };
-
-        FUNC {
-            bindings = <
-&trans  &kp LA(F1)  &kp LA(F2)  &kp LA(F3)  &kp LA(F4)  &kp LA(F5)  &kp LA(F6)  &kp LA(F7)  &kp LA(F8)  &kp LA(F9)  &kp LA(F10)  &kp LA(F11)
-&trans  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10      &kp F11
-&trans  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp LA(F12)  &kp F12
-                    &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
-            >;
-
-            label = "FUNC";
-        };
-
-        CONF {
-            bindings = <
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "CONF";
         };
     };
 };
