@@ -16,7 +16,9 @@ config ZMK_SPLIT
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
-    
+
+endif
+
 if ZMK_DISPLAY
 
 config I2C
