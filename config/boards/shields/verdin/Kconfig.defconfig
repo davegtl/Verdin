@@ -13,6 +13,10 @@ if SHIELD_VERDIN_LEFT || SHIELD_VERDIN_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_RGB_UNDERGLOW
+    select WS2812_STRIP
+    select SPI
+    
 if ZMK_DISPLAY
 
 config I2C
@@ -39,11 +43,3 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
-
-endif
-
-config ZMK_RGB_UNDERGLOW
-    select WS2812_STRIP
-    select SPI
-
-endif
