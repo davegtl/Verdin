@@ -56,7 +56,7 @@
     {
       "ref": "left_encoder",
       "name": "encoder_left",
-      "identifier": "encoder_lt",
+      "identifier": "encoder_left",
       "compatible": "alps,ec11",
       "label": "LEFT_ENCODER",
       "enabled": false
@@ -64,7 +64,7 @@
     {
       "ref": "right_encoder",
       "name": "encoder_right",
-      "identifier": "encoder_rt",
+      "identifier": "encoder_right",
       "compatible": "alps,ec11",
       "label": "RIGHT_ENCODER",
       "enabled": false
