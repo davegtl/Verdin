@@ -55,7 +55,7 @@
   "sensors": [
     {
       "ref": "left_encoder",
-      "name": "encoder_left",
+      "name": "LEFTenc",
       "identifier": "encoder_left",
       "compatible": "alps,ec11",
       "label": "LEFT_ENCODER",
@@ -63,7 +63,7 @@
     },
     {
       "ref": "right_encoder",
-      "name": "encoder_right",
+      "name": "RIGHTenc",
       "identifier": "encoder_right",
       "compatible": "alps,ec11",
       "label": "RIGHT_ENCODER",
