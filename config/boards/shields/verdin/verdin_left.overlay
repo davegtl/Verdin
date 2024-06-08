@@ -1,4 +1,4 @@
-#include "cholibri.dtsi"
+#include "verdin.dtsi"
 &kscan0 {
     col-gpios
         = <&pro_micro 8 GPIO_ACTIVE_HIGH> // col1 in the schematic

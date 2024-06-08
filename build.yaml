@@ -13,4 +13,4 @@
 #
 ---
 board: [ "nice_nano_v2" ]
-shield: [ "cholibri_left", "cholibri_right", "settings_reset" ]
+shield: [ "verdin_left", "verdin_right", "settings_reset" ]
